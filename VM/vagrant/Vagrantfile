@@ -1,0 +1,16 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "Microsoft/EdgeOnWindows10"
+	
+  # private_network is not work. public_network is work. but ip dose not match.
+	config.vm.network "public_network", ip: "10.0.60.1"
+  config.vm.guest = :windows
+  config.vm.communicator = "winrm"
+  config.vm.network :forwarded_port, guest: 3389, host: 13389
+  config.vm.network :forwarded_port, guest: 5985, host: 15985, id: "winrm", auto_correct: true
+	
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.customize ["modifyvm", :id, "--paravirtprovider", "hyperv"]
+  end
+end
