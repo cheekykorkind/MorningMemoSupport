@@ -8,3 +8,7 @@
 # pyqt5 #
 ######################
 *.ui
+
+# personal setting #
+######################
+/VM/bat/personalGitSetUp.bat
