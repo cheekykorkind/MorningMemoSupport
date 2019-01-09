@@ -23,6 +23,8 @@ python -m pip install pyqt5-tools
 python -m pip install pyinstaller
 python -m pip install selenium
 
+setx Path "C:\ProgramData\chocolatey\lib\python3\tools\Scripts;%Path%" -m
+
 REM git bash install part
 choco install git.install -y
 
@@ -37,7 +39,7 @@ choco install googlechrome -y
 
 REM Chrome Driver install
 choco install selenium-chrome-driver -y
-move C:\tools\selenium\chromedriver.exe %sharedFolder%\chromedriver.exe
+copy C:\tools\selenium\chromedriver.exe %sharedFolder%\src\chromedriver.exe
 
 pause
 REM REM python3.5.1 install part
@@ -48,11 +50,4 @@ REM REM python3.5.1 user environment variables set up part
 REM SET pythonEnv1=%LOCALAPPDATA%\Programs\Python\Python35\Scripts\
 REM SET pythonEnv2=%LOCALAPPDATA%\Programs\Python\Python35\
 REM setx PATH "%pythonEnv1%;%pythonEnv2%;%PATH%"
-
-REM because of choco, command is changed
-REM python -m PyQt5.uic.pyuic -x test1.ui -o test1.py
-REM python -m PyInstaller.__main__ test1.py
-
-REM python -m PyInstaller.__main__ --clean -F seleniumTest.py -p "C:\ProgramData\chocolatey\lib\python3\tools\Lib\site-packages\PyQt5\Qt\bin"
-
 

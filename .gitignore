@@ -1,6 +1,6 @@
 # pyinstaller #
 ##########################
-/__pycache__/*
+*__pycache__*
 /build/*
 /dist/*
 *.spec
@@ -12,3 +12,4 @@
 # personal setting #
 ######################
 /VM/bat/personalGitSetUp.bat
+*Privates.py*
