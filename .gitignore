@@ -1,14 +1,11 @@
 # pyinstaller #
 ##########################
-/__pycache__/*
+*__pycache__*
 /build/*
 /dist/*
 *.spec
 
-# pyqt5 #
-######################
-*.ui
-
 # personal setting #
 ######################
 /VM/bat/personalGitSetUp.bat
+*Privates.py*
