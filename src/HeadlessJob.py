@@ -18,8 +18,8 @@ class HeadlessJob():
         self.dayNames = ['月', '火', '水', '木', '金', '土', '日']
         self.todayName = self.dayNames[datetime.datetime.today().weekday()]
 
-    def start(self, tamelID, tamelPassword):
-        return self.loginTamel(tamelID, tamelPassword)
+    def start(self, aipoID, aipoPassword):
+        return self.loginAipo(aipoID, aipoPassword)
         
 
         self.driver.close()
@@ -30,11 +30,11 @@ class HeadlessJob():
         @param str AIPOのID
         @param str AIPOのPASSWORD
     '''
-    def loginTamel(self, tamelID, tamelPassword):
+    def loginAipo(self, aipoID, aipoPassword):
         self.driver.get(Privates().AIPO_LOGIN_URL)
 
-        self.driver.find_element_by_name('member_username').send_keys(tamelID)
-        self.driver.find_element_by_name('password').send_keys(tamelPassword)
+        self.driver.find_element_by_name('member_username').send_keys(aipoID)
+        self.driver.find_element_by_name('password').send_keys(aipoPassword)
         self.driver.find_element_by_name('login_submit').click()
 
         return 'yes'
@@ -45,5 +45,4 @@ class HeadlessJob():
         # self.driver.find_element_by_xpath("//button[@type='submit']").click()
 
         # return self.driver.find_element_by_id('tag-cloud').click().get_attribute('outerHTML')
-
-# id tag-cloud
+        # id tag-cloud

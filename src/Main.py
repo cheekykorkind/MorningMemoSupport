@@ -18,7 +18,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.myPushButton.clicked.connect(self.btn_clicked)
 
     def btn_clicked(self):
-        someValue = self.HeadlessJob.start(self.tamelID.text(), self.tamelPassword.text())
+        someValue = self.HeadlessJob.start(self.aipoID.text(), self.aipoPassword.text())
         self.label.setText(someValue)
 
 if __name__ == "__main__":
