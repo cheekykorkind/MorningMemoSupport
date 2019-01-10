@@ -38,11 +38,3 @@ class HeadlessJob():
         self.driver.find_element_by_name('login_submit').click()
 
         return 'yes'
-
-        # self.driver.get(Privates().TAMEL_LOGIN_URL)
-        # self.driver.find_element_by_name('loginid').send_keys(tamelID)
-        # self.driver.find_element_by_name('password').send_keys(tamelPassword)
-        # self.driver.find_element_by_xpath("//button[@type='submit']").click()
-
-        # return self.driver.find_element_by_id('tag-cloud').click().get_attribute('outerHTML')
-        # id tag-cloud
