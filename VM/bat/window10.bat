@@ -22,6 +22,7 @@ python -m pip install pyqt5
 python -m pip install pyqt5-tools
 python -m pip install pyinstaller
 python -m pip install selenium
+python -m pip install clipboard
 
 setx Path "C:\ProgramData\chocolatey\lib\python3\tools\Scripts;%Path%" -m
 

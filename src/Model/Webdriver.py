@@ -6,6 +6,7 @@ import datetime
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
 from Constants.Paths import Paths
 from Constants.Privates import Privates
 
