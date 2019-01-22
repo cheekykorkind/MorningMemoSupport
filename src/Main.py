@@ -6,7 +6,7 @@ import sys
 # from PyQt5 import uic
 # from Model.Webdriver import Webdriver
 # from Tasks.Aipo import Aipo
-# from Tasks.Tamel import Tamel
+from Tasks.Tamel import Tamel
 
 # from Constants.Paths import Paths
 # from View.Ui_MainWindow import Ui_MainWindow
@@ -27,6 +27,8 @@ import sys
 #         self.textBrowser.setText(aipoTamel)
 
 if __name__ == "__main__":
+    Tamel(123).updateTest()
+
     # app = QApplication(sys.argv)
     # myWindow = MyWindow(Webdriver().chromeDriver())
     # myWindow.show()

@@ -1,11 +1,14 @@
 # coding: utf-8
 from Constants.Paths import Paths
-from Constants.Privates import Privates
+# from Constants.Privates import Privates
+from Constants.Members import Members
+from Model.MeetingHost import MeetingHost
 
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+
 
 class Tamel():
     def __init__(self, chromeDriver):
@@ -24,6 +27,14 @@ class Tamel():
         # self.chromeDriver.close()
 
         return result
+
+    def updateTest(self):
+        # Members().CEOS
+        # Members().HAMASAKI
+        
+        # MeetingHost().rotateCEOs((Members().NOUTOMI, ))
+        print(2323)
+        
 
 
     '''
