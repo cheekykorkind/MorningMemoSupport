@@ -31,7 +31,10 @@ class Tamel():
         return result
 
     def updateTest(self):
-        MeetingHost().rotateCEOs()
+        if self.isFirstOfweekdays():
+            MeetingHost().rotateCEOs()
+            return
+
         MeetingHost().rotateEmployees()
 
 
@@ -64,3 +67,10 @@ class Tamel():
 
         except TimeoutException:
             print('no loginTamel')
+
+
+    def isFirstOfweekdays(self):
+        if datetime.datetime.today().weekday() is 0:
+            return True
+        
+        return False

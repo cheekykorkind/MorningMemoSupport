@@ -65,3 +65,6 @@ REM SET pythonEnv2=%LOCALAPPDATA%\Programs\Python\Python35\
 REM setx PATH "%pythonEnv1%;%pythonEnv2%;%PATH%"
 
 REM powershell "(New-Object System.Net.WebClient).DownloadFile('http://xxx.xxx.xxx.xxx/path/zabbix_win.zip','C:\zabbix_win.zip')"
+
+REM pyqt5 exe location
+REM C:\ProgramData\chocolatey\lib\python3\tools\Lib\site-packages\pyqt5_tools
