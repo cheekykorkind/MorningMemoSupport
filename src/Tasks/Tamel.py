@@ -1,9 +1,11 @@
 # coding: utf-8
+
 from Constants.Paths import Paths
 # from Constants.Privates import Privates
 from Constants.Members import Members
 from Model.MeetingHost import MeetingHost
 
+import datetime
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -29,12 +31,8 @@ class Tamel():
         return result
 
     def updateTest(self):
-        # Members().CEOS
-        # Members().HAMASAKI
-        
-        # MeetingHost().rotateCEOs((Members().NOUTOMI, ))
-        print(2323)
-        
+        MeetingHost().rotateCEOs()
+        MeetingHost().rotateEmployees()
 
 
     '''

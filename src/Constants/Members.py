@@ -11,12 +11,16 @@ def constant(f):
 
 class Members(object):
     @constant
-    def CEOS():
-        return 2
+    def NO_ONE():
+        return 0
 
     @constant
     def EMPLOYEE():
         return 1
+
+    @constant
+    def CEOS():
+        return 2
 
     # members
     @constant
